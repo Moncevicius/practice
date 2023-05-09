@@ -203,3 +203,81 @@ class Book{
 
 const exercise15 = new Book("10 Rules for Life", "Jordan B Peterson")
 console.log(exercise15.getDescription())
+
+/**
+ * Exercise 16
+ * Create a class called Employee with properties name and salary, and a method getAnnualSalary() that returns the
+ * annual salary of the employee.
+ */
+
+class Employee{
+    constructor(name, salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    getAnnualSalary(){
+        return `Employee ${this.name} gets annual salary of ${this.salary * 12}`
+    }
+}
+
+/**
+ * Exercise 17
+ * Create an instance of the Employee class and call the getAnnualSalary() method.
+ */
+
+const exercise17 = new Employee("Mantas", "1000")
+console.log(exercise17.getAnnualSalary())
+
+/**
+ * Exercise 18
+ * Create a class called Playlist with a property songs that is an array of Song objects, where each song has
+ * properties title and artist. Add a method to the Playlist class to add a song to the playlist.
+ */
+
+class Song{
+    constructor(title, artist) {
+        this.title = title;
+        this.artist = artist;
+    }
+}
+
+class Playlist{
+    constructor() {
+        this.songs = [];
+    }
+
+    addSong(title, artist){
+        const song = new Song(title, artist)
+        this.songs.push(song)
+    }
+}
+
+/**
+ * Exercise 19
+ * Create an instance of the Playlist class and call the method to add a song to the playlist.
+ */
+
+const exercise19 = new Playlist();
+exercise19.addSong("TOP HITS", "Various Artists")
+exercise19.addSong("Staying alive", "ABBA")
+console.log(exercise19.songs)
+
+/**
+ * Exercise 20
+ * Create a Dog class with properties name and breed, and a method bark() that logs a bark to the console.
+ */
+
+class Dog{
+    constructor(name, breed) {
+        this.name = name;
+        this.breed = breed;
+    }
+
+    bark(){
+        return `${this.name} is barking!! Aggressive ${this.breed}`
+    }
+}
+
+const exercise20 = new Dog("Lota", "Rottweiler")
+console.log(exercise20.bark())
